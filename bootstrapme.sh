@@ -5,7 +5,7 @@
 cd $HOME
 
 # Get an archive of our dotfiles from Github
-wget https://github.com/danakim/dotfiles/archive/master.tar.gz && mkdir dotfiles
+wget https://github.com/danakim/dotfiles/archive/master.tar.gz && mkdir .dotfiles
 tar -xvzf master.tar.gz -C ./.dotfiles --strip-components=1 && rm -f master.tar.gz
 
 # Create our dotfiles symlinks (and remove the original files)
