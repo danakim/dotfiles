@@ -18,4 +18,4 @@ ln -s ~/.dotfiles/gitconfig .gitconfig
 
 # Drop our SSH key in (we probably need the .ssh dir first)
 mkdir .ssh && chmod 700 .ssh
-ln -s ~/dotfiles/id_dsa.pub .ssh/id_dsa.pub && chmod 600 .ssh/id_dsa.pub
+ln -s ~/.dotfiles/id_dsa.pub .ssh/id_dsa.pub && chmod 600 .ssh/id_dsa.pub
