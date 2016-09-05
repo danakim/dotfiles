@@ -1,0 +1,9 @@
+[user]
+    name = Dan
+    email = dan@hostatic.ro
+[color]
+    ui = true
+[core]
+    editor = vim
+[push]
+    default = simple
