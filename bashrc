@@ -48,6 +48,10 @@ export EDITOR=/usr/bin/vim
 # Set a colorful prompt
 export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]:\w\[\033[0;32m\]\[\033[0;33m\]]\[\033[1;37m\]\$\[\033[0m\] "
 
+# Fix for locale issues for various languages - especially Python
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # Enable bash tab completion on various commands
 if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
       . /opt/local/etc/profile.d/bash_completion.sh
