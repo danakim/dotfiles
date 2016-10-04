@@ -61,3 +61,6 @@ fi
 if [ -f ~/.profile ]; then
     . ~/.profile
 fi
+if [ -d ~/.profile.d ]; then
+    . ~/.profile.d/*
+fi

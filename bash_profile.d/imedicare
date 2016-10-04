@@ -1,0 +1,4 @@
+imedicare-ssh-connection() {
+    ssh -i ~/.ssh/imed_dan_aws_ec2.pem ubuntu@10.0.0.10 -t ssh $1
+}
+alias ssh-imed=imedicare-ssh-connection
