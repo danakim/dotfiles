@@ -20,10 +20,10 @@ shopt -s checkwinsize
 export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
 # Custom aliases, some to make sure we use the GNU version of the commands
-alias ll='gls -l --color=auto'
-alias la='gls -A --color=auto'
-alias ls='gls --color=auto'
-alias l='gls -CF --color=auto'
+alias ll='gls -N -l --color=auto'
+alias la='gls -N -A --color=auto'
+alias ls='gls -N --color=auto'
+alias l='gls -N -CF --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
