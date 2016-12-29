@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/dachim/git/sysadmin/nagios/plugins'
-let g:netrw_dirhist_2='/Users/dachim/foo'
-let g:netrw_dirhist_3='/Users/dachim/Desktop/puppetlabs-lvm-0.1.2/lib/puppet/provider/logical_volume'
-let g:netrw_dirhist_4='/Users/dachim/.ssh'
-let g:netrw_dirhist_5='/home/dan/projects/maricorupti.ro'
-let g:netrw_dirhist_6='/home/dan/python-f5/f5'
