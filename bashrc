@@ -52,6 +52,9 @@ export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]:\w\[\033
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Make sure we load the right SSH key file(s)
+ssh-add -K ~/.ssh/id_rsa &>/dev/null
+
 # Enable bash tab completion on various commands
 if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
       . /opt/local/etc/profile.d/bash_completion.sh

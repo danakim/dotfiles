@@ -20,4 +20,4 @@ ln -s ~/.dotfiles/gitconfig .gitconfig
 if [ ! -d ~/.ssh ] ; then
     mkdir ~/.ssh && chmod 700 ~/.ssh
 fi
-ln -s ~/.dotfiles/id_dsa.pub ~/.ssh/id_dsa.pub && chmod 600 ~/.ssh/id_dsa.pub
+ln -s ~/.dotfiles/id_rsa.pub ~/.ssh/id_rsa.pub && chmod 600 ~/.ssh/id_rsa.pub
