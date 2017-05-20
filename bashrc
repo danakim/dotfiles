@@ -55,8 +55,8 @@ export LANG=en_US.UTF-8
 ssh-add -K ~/.ssh/id_rsa &>/dev/null
 
 # Enable bash tab completion on various commands
-if [ -d /usr/local/etc/bash_completion.d ]; then
-      . /usr/local/etc/bash_completion.d/*
+if [ -f /usr/local/etc/bash_completion ]; then
+      . /usr/local/etc/bash_completion
 fi
 
 # Add any extra profile settings
