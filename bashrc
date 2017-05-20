@@ -16,14 +16,14 @@ shopt -s checkwinsize
 # Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# Set the proper $PATH for all the extra stuff (MacPorts)
-export PATH=/opt/local/libexec/gnubin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+# Adjust the $PATH to include the Brew utils
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:$PATH
 
-# Custom aliases, some to make sure we use the GNU version of the commands
-alias ll='gls -N -l --color=auto'
-alias la='gls -N -A --color=auto'
-alias ls='gls -N --color=auto'
-alias l='gls -N -CF --color=auto'
+# Custom aliases for the GNU utils to make them run as we want
+alias ll='ls -N -l --color=auto'
+alias la='ls -N -A --color=auto'
+alias ls='ls -N --color=auto'
+alias l='ls -N -CF --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -33,7 +33,6 @@ alias homer='ssh homer'
 alias duffman='ssh duffman.hostatic.ro -p2222'
 alias vi='vim'
 alias ssh-no-key='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
-alias remove-proxy='for i in `env | grep -i webproxy | cut -d '=' -f 1`; do unset $i ; done'
 
 # Set the proper terminal colors
 export TERM=xterm-256color
@@ -43,7 +42,7 @@ export TERM=xterm-256color
 source ~/dotfiles/base16-tomorrow.dark.sh
 
 # Make sure vim is the default editor every time
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/local/bin/vim
 
 # Set a colorful prompt
 export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]:\w\[\033[0;32m\]\[\033[0;33m\]]\[\033[1;37m\]\$\[\033[0m\] "
@@ -56,8 +55,8 @@ export LANG=en_US.UTF-8
 ssh-add -K ~/.ssh/id_rsa &>/dev/null
 
 # Enable bash tab completion on various commands
-if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
-      . /opt/local/etc/profile.d/bash_completion.sh
+if [ -d /usr/local/etc/bash_completion.d ]; then
+      . /usr/local/etc/bash_completion.d/*
 fi
 
 # Add any extra profile settings
