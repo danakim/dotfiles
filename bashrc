@@ -52,7 +52,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Make sure we load the right SSH key file(s)
-ssh-add -K ~/.ssh/id_rsa &>/dev/null
+ssh-add ~/.ssh/id_rsa &>/dev/null
 
 # Enable bash tab completion on various commands
 if [ -f /usr/local/etc/bash_completion ]; then
