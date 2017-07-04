@@ -1,0 +1,10 @@
+cai-vm() {
+    cd ~/workspace/creativeai/creativeai-vm
+    vagrant ssh
+}
+
+cai-vm-start() {
+    cd ~/workspace/creativeai/creativeai-vm
+    vagrant up
+    vagrant ssh
+}
