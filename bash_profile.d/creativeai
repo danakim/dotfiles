@@ -8,3 +8,8 @@ cai-vm-start() {
     vagrant up
     vagrant ssh
 }
+
+ssh-add -l | grep -iq cai-deployer &> /dev/null
+if [ ! $? == 0 ]; then
+    ssh-add -k /Users/dan/.ssh/cai-deployer &> /dev/null
+fi

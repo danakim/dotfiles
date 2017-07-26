@@ -1,5 +1,7 @@
 # .bashrc
 #
+# Set the proper SHELL ENV variable
+export SHELL=/usr/local/bin/bash
 # Don't put duplicate lines in the history. See bash(1) for more options
 # Don't overwrite GNU Midnight Commander's setting of `ignorespace'.
 HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
