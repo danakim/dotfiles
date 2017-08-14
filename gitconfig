@@ -7,3 +7,12 @@
     editor = vim
 [push]
     default = simple
+[alias]
+    summary = log --all --oneline --no-merges
+    word-diff = diff --word-diff
+    ws-diff = diff -w
+    recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
+    overview = log --all --oneline --no-merges
+    recap = log --all --oneline --no-merges --author=<dan@hostatic.ro>
+    graph = log --graph --all --decorate --stat --date=iso
+
