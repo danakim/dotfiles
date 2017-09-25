@@ -35,6 +35,8 @@ alias homer='ssh homer'
 alias duffman='ssh duffman.hostatic.ro -p2222'
 alias vi='vim'
 alias ssh-no-key='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
+alias clear-dns-cache='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
+alias clear-docker-cache='rm -rf ~/Library/Containers/com.docker.docker/*'
 
 # Set the proper terminal colors
 export TERM=xterm-256color
