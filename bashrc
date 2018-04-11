@@ -39,6 +39,7 @@ alias vi='vim'
 alias ssh-no-key='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
 alias clear-dns-cache='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias clear-docker-cache='rm -rf ~/Library/Containers/com.docker.docker/*'
+alias clear-docker='docker container prune -f'
 alias git-push-branch='git push -u origin'
 
 # Set the proper terminal colors
@@ -63,8 +64,8 @@ export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]:\w\[\033
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# Add some of they Python Pip packages to whatever Python we are using
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages
+# Add some of the Python Pip packages to whatever Python we are using
+#export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 
 # Make sure we load the right SSH key file(s)
 ssh-add ~/.ssh/id_rsa &>/dev/null
