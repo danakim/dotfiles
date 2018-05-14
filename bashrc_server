@@ -1,5 +1,4 @@
-# Set the standard prompt
-#export PS1='\u@\h:\w\$ '
+# bashrc for remote machines
 
 # Small function to get the current git branch for the prompt
 parse_git_branch() {
@@ -7,7 +6,7 @@ parse_git_branch() {
 }
 
 # Useful and colored bash prompt
-export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;35m\]\h\[\033[0m\]:\w\[\033[0;32m\]\$(parse_git_branch)\[\033[0;33m\]]\[\033[1;37m\]\$\[\033[0m\] "
+export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;35m\]\h\[\033[0m\]:\w\[\033[0;32m\]\$(parse_git_branch)\[\033[0;33m\]]\[\033[1;37m\]\$\[\033[0m\]\n "
 export EDITOR="/usr/bin/vim"
 
 # Aliases
@@ -23,3 +22,9 @@ alias mc='mc -b'
 alias vi='vim'
 alias puppet_run='sudo /opt/puppetlabs/bin/puppet apply -v --show_diff /etc/puppetlabs/code/environments/production/manifests/site.pp'
 alias puppet_run_noop='sudo /opt/puppetlabs/bin/puppet apply -v --show_diff --noop /etc/puppetlabs/code/environments/production/manifests/site.pp'
+
+# Git aliases
+alias git-push-branch='git push -u origin'
+alias gb='git checkout -b'
+alias gs='git status'
+alias gd='git diff'

@@ -1,4 +1,4 @@
-# .bashrc
+# bashrc for local machine
 #
 # Set the proper SHELL ENV variable
 export SHELL=/usr/local/bin/bash
@@ -40,7 +40,12 @@ alias ssh-no-key='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/nul
 alias clear-dns-cache='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias clear-docker-cache='rm -rf ~/Library/Containers/com.docker.docker/*'
 alias clear-docker='docker container prune -f'
+
+# Git aliases
 alias git-push-branch='git push -u origin'
+alias gb='git checkout -b'
+alias gs='git status'
+alias gd='git diff'
 
 # Set the proper terminal colors
 export TERM=xterm-256color
@@ -58,7 +63,8 @@ parse_git_branch() {
 }
 
 # Useful and colored bash prompt
-export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]:\w\[\033[0;32m\]\$(parse_git_branch)\[\033[0;33m\]]\[\033[1;37m\]\$\[\033[0m\] "
+#export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]:\w\[\033[0;32m\]\$(parse_git_branch)\[\033[0;33m\]]\[\033[1;37m\]\$\[\033[0m\] "
+export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]:\w\[\033[0;32m\]\$(parse_git_branch)\[\033[0;33m\]]\[\033[1;37m\]\n\$ "
 
 # Fix for locale issues for various languages - especially Python
 export LC_ALL=en_US.UTF-8
