@@ -6,7 +6,7 @@
 [core]
     editor = vim
 [push]
-    default = simple
+    default = current
 [alias]
     summary = log --all --oneline --no-merges
     word-diff = diff --word-diff
