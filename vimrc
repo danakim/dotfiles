@@ -42,6 +42,9 @@ set listchars=tab:>-,trail:.,extends:>
 " Set a colored column at 80 characters
 set colorcolumn=80
 
+" Toggle the Rainbow parantheses plugin - https://github.com/luochen1990/rainbow
+let g:rainbow_active = 1
+
 " Autoclose Vim if Nerdtree is the last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
