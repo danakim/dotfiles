@@ -46,6 +46,7 @@ alias git-push-branch='git push -u origin'
 alias gb='git checkout -b'
 alias gs='git status'
 alias gd='git diff'
+alias gp='git pull'
 
 # Set the proper terminal colors
 export TERM=xterm-256color
