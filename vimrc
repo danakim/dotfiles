@@ -55,3 +55,11 @@ nmap <f3> :set paste! paste?<cr>
 " Map <Ctrl N> and <f4> to Nerdtree
 map <C-n> :NERDTreeToggle<cr>
 map <f4> :NERDTreeToggle<cr>
+
+" Tab shortcut mappings
+map <C-t><up> :tabr<cr>
+map <C-t><down> :tabl<cr>
+map <C-t><left> :tabp<cr>
+map <C-t><right> :tabn<cr>
+nnoremap <C-t> :tabnew<Space>
+inoremap <C-t> <Esc>:tabnew<Space>
