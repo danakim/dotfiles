@@ -40,6 +40,7 @@ alias ssh-no-key='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/nul
 alias clear-dns-cache='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias clear-docker-cache='rm -rf ~/Library/Containers/com.docker.docker/*'
 alias clear-docker='docker container prune -f'
+alias restart-bluetooth='/usr/local/Cellar/blueutil/2.4.0/bin/blueutil -p 0 && sleep 1 && /usr/local/Cellar/blueutil/2.4.0/bin/blueutil -p 1'
 
 # Git aliases
 alias git-push-branch='git push -u origin'
@@ -78,7 +79,7 @@ export LANG=en_US.UTF-8
 ssh-add ~/.ssh/id_rsa &>/dev/null
 
 # Let kubectl that it needs to read more kubeconfig files
-export KUBECONFIG=~/.kube/config:~/.kube/config-nf-titus:~/.kube/config-cs-fam
+#export KUBECONFIG=~/.kube/config:~/.kube/config-nf-titus:~/.kube/config-cs-fam
 
 # Enable bash tab completion on various commands
 if [ -f /usr/local/etc/bash_completion ]; then
