@@ -40,14 +40,14 @@ alias ssh-no-key='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/nul
 alias clear-dns-cache='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
 alias clear-docker-cache='rm -rf ~/Library/Containers/com.docker.docker/*'
 alias clear-docker='docker container prune -f'
-alias restart-bluetooth='/usr/local/Cellar/blueutil/2.4.0/bin/blueutil -p 0 && sleep 1 && /usr/local/Cellar/blueutil/2.4.0/bin/blueutil -p 1'
+alias restart-bluetooth='sudo /usr/local/Cellar/blueutil/2.4.0/bin/blueutil -p 0 && sleep 1 && sudo /usr/local/Cellar/blueutil/2.4.0/bin/blueutil -p 1'
 
 # Git aliases
 alias git-push-branch='git push -u origin'
 alias gb='git checkout -b'
 alias gs='git status'
 alias gd='git diff'
-alias gp='git pull'
+alias gp='git push'
 
 # Set the proper terminal colors
 export TERM=xterm-256color
