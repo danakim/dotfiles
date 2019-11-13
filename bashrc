@@ -2,11 +2,17 @@
 #
 # Set the proper SHELL ENV variable
 export SHELL=/usr/local/bin/bash
+
+# HISTORY settings
+#
 # Don't put duplicate lines in the history. See bash(1) for more options
 # Don't overwrite GNU Midnight Commander's setting of `ignorespace'.
 HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoreboth
+# Increase history size
+HISTSIZE=100000
+HISTFILESIZE=100000
 
 # Append to the history file, don't overwrite it
 shopt -s histappend
