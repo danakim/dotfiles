@@ -69,3 +69,6 @@ map <C-t><left> :tabp<cr>
 map <C-t><right> :tabn<cr>
 nnoremap <C-t> :tabnew<Space>
 inoremap <C-t> <Esc>:tabnew<Space>
+
+" Enable Pathogen
+execute pathogen#infect()
