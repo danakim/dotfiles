@@ -3,6 +3,7 @@ set paste
 set nocompatible
 set number
 set cursorline
+
 " Allow delete/backspace on Apple keyboards to delete over everything
 set backspace=indent,eol,start
 
@@ -10,18 +11,22 @@ set backspace=indent,eol,start
 set laststatus=2
 set statusline=%l/%L\ \ --\ \ %f\ \ --\ \ %y
 
-" Syntax highlighting and color scheme
+" Syntax highlighting
 syntax on
-set background=dark
 
-" Solarized color scheme options
+"" Color schemes
+" Solarized
 "let g:solarized_termcolors = 256
 "let g:solarized_termtrans = 1
 "colorscheme solarized
-
-" Base 16 color scheme and options
-let base16colorspace=256
-colorscheme base16-tomorrow
+" Base 16
+"let base16colorspace=256
+"colorscheme base16-tomorrow
+" Afterglow
+"colorscheme afterglow
+" Twilight
+colorscheme twilight256
+hi CursorLine term=bold cterm=bold guibg=lightgrey
 
 " Tabbing and indentation
 set tabstop=4
@@ -41,6 +46,7 @@ set listchars=tab:>-,trail:.,extends:>
 
 " Set a colored column at 80 characters
 set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " Toggle the Rainbow parantheses plugin - https://github.com/luochen1990/rainbow
 let g:rainbow_active = 1

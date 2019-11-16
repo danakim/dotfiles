@@ -1,4 +1,4 @@
-# bashrc for local machine
+# bashrc for personal machine
 #
 # Set the proper SHELL ENV variable
 export SHELL=/usr/local/bin/bash
@@ -56,13 +56,6 @@ alias gd='git diff'
 alias gp='git push'
 alias gl='git log --pretty=oneline'
 
-# Set the proper terminal colors
-export TERM=xterm-256color
-
-# This is needed for the base16 theme (vim, shell and iterm)
-# to display properly
-source ~/dotfiles/base16-tomorrow.dark.sh
-
 # Make sure vim is the default editor every time
 export EDITOR=/usr/local/bin/vim
 
@@ -72,21 +65,20 @@ parse_git_branch() {
 }
 
 # Useful and colored bash prompt
-#export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]:\w\[\033[0;32m\]\$(parse_git_branch)\[\033[0;33m\]]\[\033[1;37m\]\$\[\033[0m\] "
 export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]: \w\[\033[0;32m\]\$(parse_git_branch)\[\033[0;33m\]]\[\033[1;37m\]\n\$ "
 
 # Fix for locale issues for various languages - especially Python
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# Add some of the Python Pip packages to whatever Python we are using
-#export PYTHONPATH=/usr/local/lib/python2.7/site-packages
-
 # Make sure we load the right SSH key file(s)
 ssh-add ~/.ssh/id_rsa &>/dev/null
 
-# Let kubectl that it needs to read more kubeconfig files
-#export KUBECONFIG=~/.kube/config:~/.kube/config-nf-titus:~/.kube/config-cs-fam
+# Set the proper terminal for iTerm2
+export TERM=xterm-256color
+
+# This is needed for the base16 theme (vim, shell and iterm) to display properly
+#source ~/dotfiles/base16-tomorrow.dark.sh
 
 # Enable bash tab completion on various commands
 if [ -f /usr/local/etc/bash_completion ]; then
