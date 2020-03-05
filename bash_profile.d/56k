@@ -1,4 +1,4 @@
 alias tg-56k='/Users/dan/workspace/56k/reference-architecture/tg.sh'
 alias tg-cr='/Users/dan/workspace/56k/cr/tg.sh'
 alias tg-mb='/Users/dan/workspace/56k/mb/tg.sh'
-alias tg-ms='/Users/dan/workspace/56k/medispend/tg.sh'
+alias tg-ms='/Users/dan/workspace/56k/ms/tg.sh'
