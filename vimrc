@@ -1,8 +1,9 @@
 " General settings
-set paste
 set nocompatible
 set number
 set cursorline
+set hlsearch
+set incsearch
 
 " Allow delete/backspace on Apple keyboards to delete over everything
 set backspace=indent,eol,start
@@ -29,16 +30,15 @@ colorscheme twilight256
 hi CursorLine term=bold cterm=bold guibg=lightgrey
 
 " Tabbing and indentation
+filetype plugin indent on
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
 set smarttab
 set noshiftround
-filetype plugin on
-filetype indent on
-"set smartindent
-"set autoindent
+set autoindent
+set smartindent
 
 " Visualise tabs/spaces/trailing spaces
 set list
@@ -61,6 +61,8 @@ nmap <f3> :set paste! paste?<cr>
 " Map <Ctrl N> and <f4> to Nerdtree
 map <C-n> :NERDTreeToggle<cr>
 map <f4> :NERDTreeToggle<cr>
+" Set f5 to clear highlighted search
+nnoremap <f5> :noh<cr>
 
 " Tab shortcut mappings
 map <C-t><up> :tabr<cr>
@@ -69,6 +71,19 @@ map <C-t><left> :tabp<cr>
 map <C-t><right> :tabn<cr>
 nnoremap <C-t> :tabnew<Space>
 inoremap <C-t> <Esc>:tabnew<Space>
+
+" Trick to automatically set paste on and off when pasting
+" https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
 
 " Enable Pathogen
 execute pathogen#infect()

@@ -44,7 +44,7 @@ alias flanders='ssh flanders.hostatic.ro -p2222'
 alias vi='vim'
 alias ssh-no-key='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
 alias clear-dns-cache='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
-alias clear-docker-cache='rm -rf ~/Library/Containers/com.docker.docker/*'
+alias clear-docker-cache='rm -rf ~/Library/Containers/com.docker.docker/* ; rm -rf ~/Library/Containers/com.docker.docker/Data/vms/0'
 alias clear-docker='docker container prune -f'
 alias restart-bluetooth='sudo /usr/local/Cellar/blueutil/2.4.0/bin/blueutil -p 0 && sleep 1 && sudo /usr/local/Cellar/blueutil/2.4.0/bin/blueutil -p 1'
 

@@ -16,3 +16,5 @@
     recap = log --all --oneline --no-merges --author=<dan@hostatic.ro>
     graph = log --graph --all --decorate --stat --date=iso
 
+[pull]
+	rebase = false
