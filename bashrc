@@ -59,6 +59,12 @@ alias gl='git log --pretty=oneline'
 # Make sure vim is the default editor every time
 export EDITOR=/usr/local/bin/vim
 
+# Function to remotely edit a file with vim via ssh
+rvim() {
+    vim scp://$1/$2
+}
+alias rvi='rvim'
+
 # Small function to get the current git branch for the prompt
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
