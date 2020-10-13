@@ -1,5 +1,6 @@
 # bashrc for personal machine
 #
+
 # Set the proper SHELL ENV variable
 export SHELL=/usr/local/bin/bash
 
@@ -77,9 +78,6 @@ export PS1="\[\033[0;33m\][\[\033[1;37m\]\u@\[\033[1;36m\]\h\[\033[0m\]: \w\[\03
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# Make sure we load the right SSH key file(s)
-ssh-add ~/.ssh/id_rsa &>/dev/null
-
 # Set the proper terminal for iTerm2
 export TERM=xterm-256color
 
@@ -87,14 +85,11 @@ export TERM=xterm-256color
 #source ~/dotfiles/base16-tomorrow.dark.sh
 
 # Enable bash tab completion on various commands
-if [ -f /usr/local/etc/bash_completion ]; then
-      . /usr/local/etc/bash_completion
-fi
+#if [ -f /usr/local/etc/bash_completion ]; then
+#      . /usr/local/etc/bash_completion
+#fi
 
 # Add any extra profile settings
-if [ -f ~/.profile ]; then
-    . ~/.profile
-fi
-if [ -d ~/.profile.d ]; then
-    . ~/.profile.d/*
-fi
+for file in ~/.profile.d/*.bashrc; do
+    source "$file"
+done
