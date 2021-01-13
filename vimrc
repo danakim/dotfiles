@@ -72,6 +72,9 @@ map <C-t><right> :tabn<cr>
 nnoremap <C-t> :tabnew<Space>
 inoremap <C-t> <Esc>:tabnew<Space>
 
+" Tell vim to use the system clipboard when yanking lines
+set clipboard=unnamed
+
 " Trick to automatically set paste on and off when pasting
 " https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
 let &t_SI .= "\<Esc>[?2004h"
