@@ -71,6 +71,8 @@ map <C-t><left> :tabp<cr>
 map <C-t><right> :tabn<cr>
 nnoremap <C-t> :tabnew<Space>
 inoremap <C-t> <Esc>:tabnew<Space>
+nnoremap H gT
+nnoremap L gt
 
 " Tell vim to use the system clipboard when yanking lines
 set clipboard=unnamed
