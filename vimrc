@@ -81,14 +81,17 @@ set clipboard=unnamed
 " https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
-
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
-
 function! XTermPasteBegin()
   set pastetoggle=<Esc>[201~
   set paste
   return ""
 endfunction
+
+" Tell Vim to remember the last line when reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
 
 " Enable Pathogen
 execute pathogen#infect()
