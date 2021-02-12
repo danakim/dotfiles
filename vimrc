@@ -93,5 +93,8 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
 
+" Trigger a highlight using the QuickScope plugin in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
 " Enable Pathogen
 execute pathogen#infect()
