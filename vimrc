@@ -1,11 +1,12 @@
 " General settings
 set nocompatible
-set number
+set number relativenumber
 set cursorline
 set hlsearch
 set incsearch
 
 " Allow delete/backspace on Apple keyboards to delete over everything
+"
 set backspace=indent,eol,start
 
 " Statusline
