@@ -39,7 +39,7 @@ alias egrep='egrep --color=auto'
 
 # Other misc aliases
 alias s='sudo'
-alias mc='mc -b'
+alias mc='ranger'
 alias homer='ssh homer'
 alias flanders='ssh flanders.hostatic.ro -p2222'
 alias vi='vim'
