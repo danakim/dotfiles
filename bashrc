@@ -54,7 +54,7 @@ alias git-push-branch='git push -u origin'
 alias gb='git checkout -b'
 alias gs='git status'
 alias gd='git diff'
-alias gp='git push'
+alias gp='git pull'
 alias gl='git log --pretty=oneline'
 
 # Make sure vim is the default editor every time
