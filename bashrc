@@ -2,7 +2,7 @@
 #
 
 # Set the proper SHELL ENV variable
-export SHELL=/usr/local/bin/bash
+export SHELL=/opt/homebrew/bin/bash
 
 # HISTORY settings
 #
@@ -26,7 +26,7 @@ shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # Adjust the $PATH to include the Brew utils
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:$PATH
+export PATH=/opt/homebrew/bin:/opt/homebrew/opt/coreutils/libexec/gnubin:/usr/local/bin:$PATH
 
 # Custom aliases for the GNU utils to make them run as we want
 alias ll='ls -N -l --color=auto'
@@ -58,7 +58,7 @@ alias gp='git pull'
 alias gl='git log --pretty=oneline'
 
 # Make sure vim is the default editor every time
-export EDITOR=/usr/local/bin/vim
+export EDITOR=/opt/homebrew/bin/vim
 
 # Function to remotely edit a file with vim via ssh
 rvim() {
