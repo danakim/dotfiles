@@ -40,7 +40,7 @@ alias egrep='egrep --color=auto'
 # Other misc aliases
 alias s='sudo'
 alias mc='ranger'
-alias homer='ssh homer'
+alias homer='ssh -A homer.local -t bash'
 alias flanders='ssh flanders.hostatic.ro -p2222'
 alias vi='vim'
 alias ssh-no-key='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
