@@ -45,9 +45,7 @@ alias flanders='ssh flanders.hostatic.ro -p2222'
 alias vi='vim'
 alias ssh-no-key='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
 alias clear-dns-cache='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
-alias clear-docker-cache='rm -rf ~/Library/Containers/com.docker.docker/* ; rm -rf ~/Library/Containers/com.docker.docker/Data/vms/0'
 alias clear-docker='docker container prune -f'
-alias restart-bluetooth='sudo /usr/local/Cellar/blueutil/2.4.0/bin/blueutil -p 0 && sleep 1 && sudo /usr/local/Cellar/blueutil/2.4.0/bin/blueutil -p 1'
 
 # Git aliases
 alias git-push-branch='git push -u origin'
@@ -80,9 +78,6 @@ export LANG=en_US.UTF-8
 
 # Set the proper terminal for iTerm2
 export TERM=xterm-256color
-
-# This is needed for the base16 theme (vim, shell and iterm) to display properly
-#source ~/dotfiles/base16-tomorrow.dark.sh
 
 # Enable bash tab completion on various commands
 #if [ -f /usr/local/etc/bash_completion ]; then
