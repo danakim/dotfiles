@@ -1,0 +1,17 @@
+add_newline = false
+
+[hostname]
+ssh_only = false
+
+[username]
+show_always = true
+format = '[$user]($style) @ '
+
+[gcloud]
+disabled = true
+
+[git_status]
+disabled = true
+
+[terraform]
+disabled = true

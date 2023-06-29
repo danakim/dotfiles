@@ -29,10 +29,13 @@ shopt -s checkwinsize
 export PATH=/opt/homebrew/bin:/opt/homebrew/opt/coreutils/libexec/gnubin:/usr/local/bin:$PATH
 
 # Custom aliases for the GNU utils to make them run as we want
-alias ll='ls -N -l --color=auto'
-alias la='ls -N -A --color=auto'
-alias ls='ls -N --color=auto'
-alias l='ls -N -CF --color=auto'
+#alias ll='ls -N -l --color=auto'
+#alias la='ls -N -A --color=auto'
+#alias ls='ls -N --color=auto'
+#alias l='ls -N -CF --color=auto'
+alias ls='exa'
+alias ll='exa -l -h --git'
+alias lt='exa --tree'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -83,6 +86,9 @@ export TERM=xterm-256color
 #if [ -f /usr/local/etc/bash_completion ]; then
 #      . /usr/local/etc/bash_completion
 #fi
+
+# Init the Startship prompt
+eval "$(starship init bash)"
 
 # Add any extra profile settings
 for file in ~/.profile.d/*.bashrc; do
